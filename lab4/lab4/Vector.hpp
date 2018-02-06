@@ -20,6 +20,9 @@ public:
 	Vector& operator++(int);
 	Vector& operator--();
 	Vector& operator--(int);
+	Vector& Vector::operator=(Vector &rhs);
+	friend void swap(Vector & first, Vector & second);
+	Vector& Vector::operator+=(Vector& rhs);
 
 private:
 	static const int DEFAULT_VAL = 0;

@@ -86,3 +86,20 @@ Vector& Vector::operator--(int) {
 }
 
 
+Vector& Vector::operator=(Vector &rhs) {
+	swap(*this, rhs);
+	return *this;
+}
+
+void swap(Vector & first, Vector & second) {
+	swap(first.x, second.x);
+	swap(first.y, second.y);
+	swap(first.z, second.z);
+}
+
+Vector& Vector::operator+=(Vector& rhs) {
+	x = x + rhs.x;
+	y = y + rhs.y;
+	z = z + rhs.z;
+	return *this;
+}
