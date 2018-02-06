@@ -103,3 +103,27 @@ Vector& Vector::operator+=(Vector& rhs) {
 	z = z + rhs.z;
 	return *this;
 }
+
+Vector& Vector::operator-=(Vector& rhs) {
+	x = x - rhs.x;
+	y = y - rhs.y;
+	z = z - rhs.z;
+	return *this;
+}
+
+Vector& operator+(const Vector& a, const Vector& b) {
+	Vector * newVector = new Vector(a);
+	newVector->set_X((a.x + b.x));
+	newVector->set_Y((a.y + b.y));
+	newVector->set_Z((a.z + b.z));
+	return *newVector;
+}
+
+Vector& operator-(const Vector& a, const Vector& b) {
+	Vector * newVector = new Vector(a);
+	newVector->set_X((a.x - b.x));
+	newVector->set_Y((a.y - b.y));
+	newVector->set_Z((a.z - b.z));
+	return *newVector;
+}
+

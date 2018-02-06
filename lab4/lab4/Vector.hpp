@@ -23,7 +23,10 @@ public:
 	Vector& Vector::operator=(Vector &rhs);
 	friend void swap(Vector & first, Vector & second);
 	Vector& Vector::operator+=(Vector& rhs);
-
+	Vector& Vector::operator-=(Vector& rhs);
+	friend Vector& operator+(const Vector& a, const Vector& b);
+	friend Vector& operator-(const Vector& a, const Vector& b);
+	Vector& operator*(const Vector& a);
 private:
 	static const int DEFAULT_VAL = 0;
 	double x;

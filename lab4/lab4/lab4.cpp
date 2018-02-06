@@ -41,6 +41,7 @@ int main() {
 	cout << "Replaced newVec with copyVec Testing copy connstructor output " << endl;
 	cout << *newVec << endl;
 
+	//testing += operator
 	cout << "Testing += operator " << endl;
 	(*copyVec)++;
 	(*copyVec)++;
@@ -52,6 +53,38 @@ int main() {
 	cout << "after *newVec += *copyVec" << endl;
 	*newVec += *copyVec;
 	cout << *newVec << endl;
+
+	//testing -= operator
+	cout << "Testing -= operator " << endl;
+	(*copyVec)++;
+	(*newVec)++;
+	cout << "newVec before " << endl;
+	cout << *newVec << endl;
+	cout << "copyVec before " << endl;
+	cout << *copyVec << endl;
+	cout << "after *newVec -= *copyVec" << endl;
+	*newVec -= *copyVec;
+	cout << *newVec << endl;
+
+	//testing + operator 
+	cout << "testing +  operator " << endl;
+	cout << "newVec before " << endl;
+	cout << *newVec << endl;
+	cout << "copyVec before " << endl;
+	cout << *copyVec << endl;
+	cout << "adding newVec + copyVec " << endl;
+	Vector nVec = (*newVec) + (*copyVec);
+	cout << nVec;
+
+	//testing + operator 
+	cout << "testing - operator " << endl;
+	cout << "newVec before " << endl;
+	cout << *newVec << endl;
+	cout << "copyVec before " << endl;
+	cout << *copyVec << endl;
+	cout << "subtracting newVec - copyVec " << endl;
+	Vector nMinusVec = (*newVec) - (*copyVec);
+	cout << nMinusVec;
 
 	system("PAUSE");
 	return 0;
