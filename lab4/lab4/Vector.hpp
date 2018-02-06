@@ -16,6 +16,10 @@ public:
 	void set_Z(double);
 	void clear();
 	friend ostream& operator<<(ostream& os, const Vector& theVector);
+	Vector& operator++();
+	Vector& operator++(int);
+	Vector& operator--();
+	Vector& operator--(int);
 
 private:
 	static const int DEFAULT_VAL = 0;

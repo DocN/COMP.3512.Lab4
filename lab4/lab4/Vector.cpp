@@ -57,5 +57,32 @@ ostream& operator<<(ostream& os, const Vector& theVector)
 	return os;
 }
 
+Vector& Vector::operator++() {
+	x = x + 1;
+	y = y + 1;
+	z = z + 1;
+	return *this;
+}
+
+Vector& Vector::operator++(int) {
+	x = x + 1;
+	y = y + 1;
+	z = z + 1;
+	return *this;
+}
+
+Vector& Vector::operator--() {
+	x = x - 1;
+	y = y - 1;
+	z = z - 1;
+	return *this;
+}
+
+Vector& Vector::operator--(int) {
+	x = x - 1;
+	y = y - 1;
+	z = z - 1;
+	return *this;
+}
 
 
