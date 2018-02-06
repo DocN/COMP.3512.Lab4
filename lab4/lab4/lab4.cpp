@@ -1,9 +1,10 @@
 #include <iostream>
+#include "Vector.hpp"
 using namespace std;
 
 int main() {
-	cout << "test" << endl;
-	cout << "rofl" << endl;
+	Vector * newVec = new Vector();
+
 	system("PAUSE");
 	return 0;
 }

@@ -10,4 +10,10 @@ private:
 public:
 	Vector();
 	Vector(const Vector &v2);
+	int get_X();
+	int get_Y();
+	int get_Z();
+	void set_X(int);
+	void set_Y(int);
+	void set_Z(int);
 };
