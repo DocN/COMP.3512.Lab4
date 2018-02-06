@@ -7,9 +7,7 @@
 #include <vector>
 
 Vector::Vector() {
-	x = DEFAULT_SIZE;
-	y = DEFAULT_SIZE;
-	z = DEFAULT_SIZE;
+	clear();
 }
 
 Vector::Vector(const Vector &v2) {
@@ -37,5 +35,12 @@ void Vector::set_Y(int _y) {
 }
 void Vector::set_Z(int _z) {
 	z = _z;
+}
+
+//is it clear what's going on?
+void Vector::clear() {
+	x = DEFAULT_VAL;
+	y = DEFAULT_VAL;
+	z = DEFAULT_VAL;
 }
 

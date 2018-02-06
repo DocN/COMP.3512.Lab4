@@ -2,7 +2,7 @@
 
 class Vector {
 private:
-	static const int DEFAULT_SIZE = 0;
+	static const int DEFAULT_VAL = 0;
 	int x;
 	int y;
 	int z;
@@ -16,4 +16,5 @@ public:
 	void set_X(int);
 	void set_Y(int);
 	void set_Z(int);
+	void clear();
 };
