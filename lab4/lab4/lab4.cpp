@@ -3,16 +3,20 @@
 using namespace std;
 
 int main() {
+	//creating default Vector
 	Vector * newVec = new Vector();
 
+	//testing print stream
 	cout << "testing print overload stream " << endl;
 	cout << *newVec << endl;
 
+	//testing copy constructor
 	cout << "testing copy constructor " << endl;
 	Vector * copyVec = new Vector(*newVec);
 	cout << *copyVec << endl;
 	cout << endl;
 
+	//testing increments and deincrements pre/post
 	cout << "Test Pre-Increment" << endl;
 	if ((++(*newVec)).get_X() == 1) {
 		cout << *newVec << endl;
@@ -43,7 +47,7 @@ int main() {
 	cout << *newVec << endl;
 	cout << *copyVec << endl;
 	*newVec = *copyVec;
-	cout << "Replaced newVec with copyVec Testing copy connstructor output " << endl;
+	cout << "Replaced newVec with copyVec Testing copy constructor output " << endl;
 	cout << *newVec << endl;
 	cout << endl;
 
@@ -129,6 +133,7 @@ int main() {
 	cout << ((*newVec)[2]) << endl;
 	
 	cout << "Testing Completed " << endl;
+
 	system("PAUSE");
 	return 0;
 }

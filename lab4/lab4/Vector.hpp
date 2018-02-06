@@ -30,6 +30,7 @@ public:
 	friend double operator*(const Vector& a, const Vector& b);
 	void operator*(double);
 	double operator[](int);
+
 private:
 	static const int DEFAULT_VAL = 0;
 	double x;
