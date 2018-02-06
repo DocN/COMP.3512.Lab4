@@ -15,6 +15,7 @@ public:
 	void set_Y(double);
 	void set_Z(double);
 	void clear();
+
 	friend ostream& operator<<(ostream& os, const Vector& theVector);
 	Vector& operator++();
 	Vector& operator++(int);
@@ -26,7 +27,9 @@ public:
 	Vector& Vector::operator-=(Vector& rhs);
 	friend Vector& operator+(const Vector& a, const Vector& b);
 	friend Vector& operator-(const Vector& a, const Vector& b);
-	Vector& operator*(const Vector& a);
+	friend double operator*(const Vector& a, const Vector& b);
+	void operator*(double);
+	double operator[](int);
 private:
 	static const int DEFAULT_VAL = 0;
 	double x;

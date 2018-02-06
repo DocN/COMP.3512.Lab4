@@ -127,3 +127,26 @@ Vector& operator-(const Vector& a, const Vector& b) {
 	return *newVector;
 }
 
+double operator*(const Vector& a, const Vector& b) {
+	return((a.x * b.x) + (a.y * b.y) + (a.z * b.z));
+}
+
+void Vector::operator*(double val) {
+	x = x *val;
+	y = y *val;
+	z = z *val;
+}
+
+double Vector::operator[](int selector) {
+	if (selector == 0) {
+		return x;
+	}
+	else if (selector == 1) {
+		return y;
+	}
+	else if (selector == 2) {
+		return z;
+	}
+	return -1;
+}
+
