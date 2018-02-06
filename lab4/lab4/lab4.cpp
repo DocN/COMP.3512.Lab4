@@ -127,6 +127,8 @@ int main() {
 	cout << ((*newVec)[0]) << endl;
 	cout << ((*newVec)[1]) << endl;
 	cout << ((*newVec)[2]) << endl;
+	
+	cout << "Testing Completed " << endl;
 	system("PAUSE");
 	return 0;
 }
