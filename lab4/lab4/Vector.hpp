@@ -1,20 +1,25 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
 class Vector {
-private:
-	static const int DEFAULT_VAL = 0;
-	int x;
-	int y;
-	int z;
 
 public:
 	Vector();
 	Vector(const Vector &v2);
-	int get_X();
-	int get_Y();
-	int get_Z();
-	void set_X(int);
-	void set_Y(int);
-	void set_Z(int);
+	~Vector();
+	double get_X();
+	double get_Y();
+	double get_Z();
+	void set_X(double);
+	void set_Y(double);
+	void set_Z(double);
 	void clear();
+	friend ostream& operator<<(ostream& os, const Vector& theVector);
+
+private:
+	static const int DEFAULT_VAL = 0;
+	double x;
+	double y;
+	double z;
 };

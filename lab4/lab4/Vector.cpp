@@ -6,6 +6,8 @@
 #include <array>
 #include <vector>
 
+using namespace std;
+
 Vector::Vector() {
 	clear();
 }
@@ -16,24 +18,27 @@ Vector::Vector(const Vector &v2) {
 	z = v2.y;
 }
 
-int Vector::get_X() {
+Vector::~Vector() {
+
+}
+double Vector::get_X() {
 	return x;
 }
-int Vector::get_Y() {
+double Vector::get_Y() {
 	return y;
 }
 
-int Vector::get_Z() {
+double Vector::get_Z() {
 	return z;
 }
 
-void Vector::set_X(int _x) {
+void Vector::set_X(double _x) {
 	x = _x;
 }
-void Vector::set_Y(int _y) {
+void Vector::set_Y(double _y) {
 	y = _y;
 }
-void Vector::set_Z(int _z) {
+void Vector::set_Z(double _z) {
 	z = _z;
 }
 
@@ -43,4 +48,14 @@ void Vector::clear() {
 	y = DEFAULT_VAL;
 	z = DEFAULT_VAL;
 }
+
+ostream& operator<<(ostream& os, const Vector& theVector)
+{
+	os << "X = " << theVector.x << endl;
+	os << "Y = " << theVector.y << endl;
+	os << "Z = " << theVector.z << endl;
+	return os;
+}
+
+
 
